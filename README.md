@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# QUIET ON SET!!!
+
+Keeping it reel since 2020. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
