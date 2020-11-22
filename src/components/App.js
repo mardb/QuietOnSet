@@ -1,10 +1,11 @@
 import React from 'react';
-
-
+import Nav from './Nav';
+import Search from './Search';
 function App() {
   return (
     <div className="App">
-      <h1>Quiet On Set!</h1>
+      <Nav/>
+      <Search/>
     </div>
   );
 }
