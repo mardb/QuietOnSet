@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Nav from './Nav';
 import Search from './Search';
+import AllMovies from './AllMovies';
 
 class App extends Component {
   constructor() {
@@ -20,16 +21,14 @@ class App extends Component {
   }
 
   handleSubmit = (event) => {
+    event.preventDefault();
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.state.apiKey}&query=${this.state.searchTerm} `)
-    // 
-    
-      .then(res => res.json())
+      .then(data=> data.json())
       .then(data => {
         console.log(data)
-        console.log(this.apiKey)
+        // console.log(this.apiKey)
         this.setState({ movies: [...data.results]})
     })
-    event.preventDefault();
   }
 
   render(){
@@ -40,6 +39,7 @@ class App extends Component {
         handleSubmit={this.handleSubmit} 
         handleChange={this.handleChange}
         />
+        <AllMovies movies={this.state.movies}/>
       </div>
     );
   }
