@@ -11,7 +11,7 @@ class App extends Component {
       apiKey: 
       process.env.REACT_APP_API
     }
-    this.apiKey = process.env.REACT_APP_API
+    // this.apiKey = process.env.REACT_APP_API
   }
 
   
@@ -20,14 +20,14 @@ class App extends Component {
   }
 
   handleSubmit = (event) => {
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.searchTerm} `)
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.state.apiKey}&query=${this.state.searchTerm} `)
     // 
     
       .then(res => res.json())
       .then(data => {
         console.log(data)
         console.log(this.apiKey)
-        this.setState({ data: [...data.results]})
+        this.setState({ movies: [...data.results]})
     })
     event.preventDefault();
   }
