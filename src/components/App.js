@@ -7,7 +7,9 @@ class App extends Component {
     super()
     this.state = {
       movies:[],
-      searchTerm: ''
+      searchTerm: '',
+      apiKey: 
+      process.env.REACT_APP_API
     }
     this.apiKey = process.env.REACT_APP_API
   }
