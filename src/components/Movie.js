@@ -3,7 +3,7 @@ import React from 'react';
 
 const Movie = (props) => {
 return (
-  < div className="col s12 m6 l3">
+  < div className="col s12 m6 l3 ">
     <div className="card">
       <div className="card-image waves-effect waves-block waves-light">
         {
