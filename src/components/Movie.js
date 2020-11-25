@@ -17,7 +17,7 @@ return (
           height: 360}} />}
       </div>
       <div>
-        <p><a href="details" >View Details</a></p>
+        <p><a href="#" onClick={()=> props.viewMovieInfo(props.movieId)} >View Details</a></p>
       </div>
     </div>
   </div>

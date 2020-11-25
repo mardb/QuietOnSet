@@ -3,6 +3,7 @@ import Nav from './Nav';
 import Search from './Search';
 import AllMovies from './AllMovies';
 import Pagination from './Pagination';
+import MovieInfo from './MovieInfo';
 
 class App extends Component {
   constructor() {
@@ -14,6 +15,8 @@ class App extends Component {
         process.env.REACT_APP_API,
       totalResults:0,
       currentPage: 1,
+      currentMovie: null,
+      
     }
     // this.apiKey = process.env.REACT_APP_API
   }
@@ -33,6 +36,17 @@ class App extends Component {
     })
   }
 
+  viewMovieInfo = (id) => {
+    const filteredMovie = this.state.movies.filter(movie => movie.id === id)
+
+    const newCurrentMovie = filteredMovie.length > 0 ? filteredMovie[0] : null
+    this.setState({ currentMovie: newCurrentMovie})
+  }
+
+  goBackToMovies = () => {
+    this.setState({ currentMovie: null })
+  }
+
   nextPage = (pageNumber) =>{
   fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.state.apiKey}&query=${this.state.searchTerm}&page=${pageNumber} `)
   .then(data=> data.json())
@@ -47,12 +61,13 @@ class App extends Component {
     return (
       <div className="App grey darken-4" id="all">
         <Nav/>
-        <Search 
-        handleSubmit={this.handleSubmit} 
-        handleChange={this.handleChange}
-        />
-        <AllMovies movies={this.state.movies}/>
-        {this.state.totalResults > 20 ? <Pagination pages = {numberOfPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/> : ''}
+        { this.state.currentMovie === null ?
+        <div>
+        <Search handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
+        <AllMovies viewMovieInfo={this.viewMovieInfo} movies={this.state.movies}/></div> : <MovieInfo goBackToMovies={this.goBackToMovies} currentMovie={this.state.currentMovie}/> }
+        {this.state.totalResults > 20 && this.state.currentMovie === null ? <Pagination pages = {numberOfPages} nextPage={this.nextPage} currentPage={this.state.currentPage}/> : ''}
+        
+        
       </div>
     );
   }
