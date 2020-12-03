@@ -23,7 +23,13 @@ const MovieInfo = (props) =>{
               <p>Directed By: {props.currentMovie.director}</p>
                             <p>{props.currentMovie.overview}</p>
               <p>{props.currentMovie.overview}</p>
-             <p>Rating:</p>
+              <p>Rating: {props.currentMovie.vote_average} / 10</p>
+              <p>
+              <a class="btn disabled">Vote</a>
+              </p>
+
+  <p> Current Votes: {props.currentMovie.vote_count}</p>
+              
             </div>
             </div>
         </div>
