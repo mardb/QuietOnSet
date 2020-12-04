@@ -15,7 +15,7 @@ click on the search bar and enter the name of the movie you would like informati
 
 Here is a quick visual tutorial.
 
-![alt Text](https://media.giphy.com/media/k0Zi9DwIJi1R77cAdm/giphy.gif)
+![alt Text](https://media.giphy.com/media/TubDMXQFd9nkJOAtS5/giphy.gif)
 
 ## Available Scripts
 
