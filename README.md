@@ -13,8 +13,10 @@ We Keep it reel!
 How to use: 
 click on the search bar and enter the name of the movie you would like information on and let us provide you all the information!
 
-Here is a quick visual tutorial. 
-https://gph.is/g/ZWqRL3d
+Here is a quick visual tutorial.
+
+![alt Text](https://media.giphy.com/media/k0Zi9DwIJi1R77cAdm/giphy.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
