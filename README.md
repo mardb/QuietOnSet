@@ -17,6 +17,13 @@ Here is a quick visual tutorial.
 
 ![alt Text](https://media.giphy.com/media/TubDMXQFd9nkJOAtS5/giphy.gif)
 
+
+## Github Repo
+
+[Github Repo front end](https://github.com/mardb/QuietOnSet)
+
+[Githu Repo Back end](https://github.com/mardb/QuietOnSetDb)
+
 ## Available Scripts
 
 In the project directory, you can run:
