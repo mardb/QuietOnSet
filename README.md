@@ -4,6 +4,17 @@ Keeping it reel since 2020.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+Quiet on set is a website designed for users to search for their favorite Movies! 
+Here you will find details on the movies you love and the ability to rate them to let others know wether or not it's worth investing time they will never get back! 
+
+We Keep it reel! 
+
+How to use: 
+click on the search bar and enter the name of the movie you would like information on and let us provide you all the information!
+
+Here is a quick visual tutorial. 
+https://gph.is/g/ZWqRL3d
 ## Available Scripts
 
 In the project directory, you can run:
